@@ -14,6 +14,7 @@ function collectData()  {
 	//	Declare a result array
 	var timestamp = new Date();
 	var results = [timestamp];
+	var resultsWithKey = [];
 
 	//  Select the active spreadsheet
 	var sheet = SpreadsheetApp.getActiveSheet();
@@ -23,6 +24,7 @@ function collectData()  {
 
 		//	Push the results in an array
 		results.push(getResponse(variables[i]));
+		resultsWithKey[variables[i]] = getResponse(variables[i]);
 	};
 	
 	//  Add the responses to the spreadsheet
