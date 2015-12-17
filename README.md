@@ -6,3 +6,4 @@ Inspired by Gustavo Gonnet I created a more modular and easy to use way to integ
 <br /><b>Note: Remember not to share this token with anybody!</b>
 
 2. Add the required variable names, as named as the particle variable, in the <i>variables</i> array.
+<br /><b>Note: Currently, up to 10 cloud variables may be defined and each variable name is limited to a maximum of 12 characters.</b>
