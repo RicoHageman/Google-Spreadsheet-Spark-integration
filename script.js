@@ -2,6 +2,7 @@ var device_ID = '__YOUR_PARTICLE_DEVICE_ID__ ';
 var access_token = '__YOUR_PARTICLE_ACCESS_TOKEN__';
 var variables = [''];
 var checkLatestData = true;
+var refreshTime = 60;
 
 //  Select the active spreadsheet
 var sheet = SpreadsheetApp.getActiveSheet();
@@ -69,6 +70,6 @@ function collectData()  {
 	//  Add the responses to the spreadsheet
 	sheet.appendRow(results);
 
-	Utilities.sleep(5 * 1000)
+	Utilities.sleep(refreshTime * 1000)
 	collectData();
 }
